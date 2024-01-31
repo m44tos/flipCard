@@ -1,0 +1,30 @@
+.card{
+    width: 200px;
+    height: 300px;
+    perspective: 1000px;
+}
+.frente, .verso{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: transform 0.5s;
+    background-color: #202020;
+    color: aliceblue;
+    padding: 20px;
+
+}
+
+.frente{
+    z-index: 2;
+}
+.verso{
+    transform: rotateY(180deg);
+    z-index: 1;
+}
+.virado .frente{
+    transform: rotateY(180deg);
+}
+.virado .verso{
+    transform: rotateY(0deg);
+}
